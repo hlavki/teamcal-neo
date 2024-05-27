@@ -51,7 +51,7 @@ function getXMLHttpRequest(where) {
  * @param string obj = xmlHttp object
  */
 function stateChanged(obj) {
-   document.getElementById(obj.output).innerHTML="<img src=\"img/ajax-loader.gif\" alt=\"\" title=\"Processing...\">";
+   document.getElementById(obj.output).innerHTML="<img src=\"images/ajax-loader.gif\" alt=\"\" title=\"Processing...\">";
    if (obj.readyState == 4) {
       document.getElementById(obj.output).innerHTML=xmlHttp.responseText;
       delete obj;
