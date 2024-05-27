@@ -26,9 +26,9 @@ if (strlen($_REQUEST['server']) and strlen($_REQUEST['db']) and strlen($_REQUEST
             $msg .= "<div class='alert alert-warning'><h5>Table Test</h5><p>Tables with the given prefix do not exist.</p></div>";
         }
     } catch (PDOException $e) {
-        $msg = "<div class='alert alert-danger'><h5>Database Connection Test</h5><p>Connect to mySQL server and/or database failed.</p></div>";
+        $msg = "<div class='alert alert-danger'><h5>Database Connection Test</h5><p>Connect to mySQL server and/or database failed.<br>Reason: ".$e->getMessage()."</p></div><br/>";
     }
 } else {
-    $msg = "<div class='alert alert-danger'><h5>Database Connection Test</h5><p>Connect to mySQL server and/or database failed.</p></div>";
+    $msg = "<div class='alert alert-danger'><h5>Database Connection Test</h5><p>Connect to mySQL server and/or database failed.<br>Reason: ".$e->getMessage()."</p></div>";
 }
 echo $msg;
