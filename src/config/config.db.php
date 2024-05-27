@@ -18,10 +18,10 @@ if (!defined('VALID_ROOT')) exit('');
  * 
  * Enter your database parameter here
  */
-$CONF['db_server'] = "localhost";
-$CONF['db_name'] = "tcneo";
-$CONF['db_user'] = "root";
-$CONF['db_pass'] = "";
+$CONF['db_server'] = getenv("DB_SERVER");
+$CONF['db_name'] = getenv("DB_NAME");
+$CONF['db_user'] = getenv("DB_USER");
+$CONF['db_pass'] = getenv("DB_PASSWORD");
 $CONF['db_table_prefix'] = "tcneo_";
 
 //
