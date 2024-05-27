@@ -10,6 +10,11 @@ services:
 
   teamcal:
     build: .
+    environment:
+      DB_SERVER: mysql
+      DB_USER: teamcal
+      DB_PASSWORD: teamcal
+      DB_NAME: teamcal
     ports:
       - "8080:80"
 
